@@ -18,7 +18,7 @@ export default withTracker((props) => {
     meetingId,
     amIModerator,
     closeBreakoutPanel,
-    getNumUsersByBreakoutId,
+    isUserInBreakoutRoom,
   } = Service;
   const breakoutRooms = findBreakouts();
   const isMicrophoneUser = AudioService.isConnected() && !AudioService.isListenOnly();
@@ -36,7 +36,7 @@ export default withTracker((props) => {
     meetingId: meetingId(),
     amIModerator: amIModerator(),
     closeBreakoutPanel,
-    getNumUsersByBreakoutId,
     isMeteorConnected,
+    isUserInBreakoutRoom,
   };
 })(BreakoutContainer);
